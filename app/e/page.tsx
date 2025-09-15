@@ -95,8 +95,8 @@ function Section({
     children: React.ReactNode;
 }) {
     return (
-        <section id={id} className="mx-auto w-full max-w-7xl px-6 py-28 scroll-mt-28">
-            <header className="mb-12">
+        <section id={id} className="mx-auto w-full max-w-7xl px-6 py-8 scroll-mt-28">
+            <header className="mb-6">
                 <h2 className="text-2xl font-semibold tracking-tight">{title}</h2>
                 {subtitle && <p className="mt-2 text-sm text-gray-600">{subtitle}</p>}
             </header>
