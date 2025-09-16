@@ -228,7 +228,7 @@ export default function Page() {
                                 기간
                             </div>
                             <div className="mt-3 grid grid-cols-3 gap-2">
-                                {["2023", "2024", "2025"].map((y) => (
+                                {["전체", "2023", "2024", "2025"].map((y) => (
                                     <button
                                         key={y}
                                         className="text-xs rounded-md border border-gray-200 px-2.5 py-1.5 hover:border-[#3895d1] hover:text-[#3895d1] bg-white text-gray-700"
@@ -261,7 +261,7 @@ export default function Page() {
             </section>
 
             {/* Contact */}
-            <Section title="협업 문의">
+            {/* <Section title="협업 문의">
                 <Card className="p-6 md:p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
                     <div>
                         <div className="text-base md:text-lg font-medium text-[#3895d1]">프로젝트 브리프 공유</div>
@@ -284,7 +284,7 @@ export default function Page() {
                         </a>
                     </div>
                 </Card>
-            </Section>
+            </Section> */}
 
             {/* Footer */}
             <footer className="border-t border-gray-200">

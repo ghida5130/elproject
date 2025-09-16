@@ -166,10 +166,10 @@ export default function Page() {
                         className="max-w-3xl"
                     >
                         <div className="inline-flex items-center gap-2 rounded-full border px-3 py-1 text-xs text-[#2a6e99] border-[#3895d1]/30 bg-[#3895d1]/10 ring-1 ring-black/5 dark:ring-white/10">
-                            사회적 기업 × CSR/ESG 협업 포트폴리오
+                            코끼리공장
                         </div>
                         <h1 className="mt-4 text-4xl md:text-6xl font-semibold leading-[1.05] tracking-[-0.03em]">
-                            협업 사례
+                            CSR/ESG 협업 자료
                         </h1>
                         <p className="mt-4 text-lg md:text-xl text-gray-600 dark:text-gray-300">
                             실제로 진행한 프로젝트들을 통해 협업 방식을 보여드립니다. 카테고리, 간단 소개, 키워드와 함께
