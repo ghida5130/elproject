@@ -260,32 +260,6 @@ export default function Page() {
                 </div>
             </section>
 
-            {/* Contact */}
-            {/* <Section title="협업 문의">
-                <Card className="p-6 md:p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-                    <div>
-                        <div className="text-base md:text-lg font-medium text-[#3895d1]">프로젝트 브리프 공유</div>
-                        <p className="mt-1 text-sm text-gray-600">
-                            업종·목표·기간·예산 범위를 알려주세요. 2주 내 제안서를 드립니다.
-                        </p>
-                    </div>
-                    <div className="flex gap-3">
-                        <a
-                            href="mailto:hello@socialenterprise.co.kr?subject=%ED%98%91%EC%97%85%20%EC%9D%B8%EC%BF%BC%EB%A6%AC"
-                            className="inline-flex items-center rounded-lg bg-[#3895d1] text-white text-sm font-medium px-4 py-2 shadow hover:brightness-95"
-                        >
-                            이메일 보내기
-                        </a>
-                        <a
-                            href="#"
-                            className="inline-flex items-center rounded-lg text-[#3895d1] ring-1 ring-[#3895d1]/40 text-sm font-medium px-4 py-2 hover:bg-[#3895d1]/10"
-                        >
-                            포트폴리오 PDF
-                        </a>
-                    </div>
-                </Card>
-            </Section> */}
-
             {/* Footer */}
             <footer className="border-t border-gray-200">
                 <div className="max-w-7xl mx-auto px-6 md:px-8 py-8 text-sm text-gray-500 flex flex-col md:flex-row items-start md:items-center justify-between gap-3">

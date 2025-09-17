@@ -1,0 +1,454 @@
+.page {
+    background-color: #1c95d4;
+    margin: 0;
+    padding: 0 2vw;
+    color: #333;
+    min-height: 100vh;
+}
+
+/* 상단 로고 섹션 */
+.header {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-top: 20px;
+    margin-bottom: 25px;
+}
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+.line {
+    width: 120%;
+    height: 2px;
+    background: white;
+    margin-top: 8px;
+}
+.mainText {
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+/* 메인 콘텐츠 컨테이너 */
+.container {
+    background-color: white;
+    border-radius: 16px;
+    // padding: 6vh 50px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 1650px;
+    margin: 0 auto;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+/* 3단 정보 배너 스타일 (업데이트) */
+.infoBanner {
+    display: flex;
+    justify-content: center;
+    text-align: left;
+    flex-wrap: wrap;
+    background-color: #fbfbfb;
+    padding: 40px 18px;
+    gap: 12px;
+}
+
+.infoCard {
+    min-width: 320px;
+    max-width: 520px;
+    padding: 22px 22px;
+    border-right: 0;
+    border-radius: 14px;
+    background: #fff;
+    box-shadow: 0 2px 0 rgba(56, 149, 209, 0.06) inset, 0 1px 0 rgba(44, 123, 184, 0.04);
+    position: relative;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    border: 1px solid #e9eef3;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+
+    h3 {
+        font-size: 1.25rem;
+        color: #0e3b57;
+        margin: 0 0 14px 0;
+        font-weight: 700;
+        letter-spacing: -0.2px;
+    }
+}
+
+.kpi {
+    margin: 4px 0 14px 0;
+    font-size: 0.95rem;
+    color: #2c3e50;
+
+    strong {
+        color: #3895d1;
+        font-weight: 800;
+    }
+}
+
+.brandRow {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 6px;
+}
+
+.brandBadge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 14px;
+    border-radius: 999px;
+    background: linear-gradient(180deg, #f6fbff, #eef6fb);
+    border: 1px solid #dfeaf3;
+    font-weight: 700;
+    color: #184b68;
+    box-shadow: 0 1px 0 rgba(56, 149, 209, 0.06) inset;
+
+    &::before {
+        content: "";
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #3895d1, #2c7bb8);
+    }
+}
+
+@media (max-width: 768px) {
+    .brandRow {
+        gap: 8px;
+    }
+    .brandBadge {
+        padding: 8px 12px;
+        font-size: 0.95rem;
+    }
+}
+/* 칩(업종) */
+.chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 0;
+    margin: 0 0 8px 0;
+    list-style: none;
+}
+
+.chip {
+    padding: 8px 12px;
+    border-radius: 999px;
+    background: linear-gradient(180deg, #f0f7fb, #e7f2f9);
+    border: 1px solid #d4e7f4;
+    font-size: 0.9rem;
+    color: #245c7d;
+    white-space: nowrap;
+}
+
+/* 메트릭 */
+.metrics {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.metric {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 8px;
+}
+
+.metricLabel {
+    font-size: 0.92rem;
+    color: #355a70;
+}
+
+.metricValue {
+    font-weight: 800;
+    color: #1c95d4;
+}
+
+.progress {
+    grid-column: 1 / -1;
+    height: 8px;
+    border-radius: 6px;
+    background: #eef6fb;
+    overflow: hidden;
+    position: relative;
+
+    span {
+        display: block;
+        height: 100%;
+        background: linear-gradient(90deg, #3895d1, #2c7bb8);
+        border-radius: 6px;
+    }
+}
+
+/* 더미 로고(이니셜 아바타) */
+.logoGrid {
+    display: grid;
+    grid-template-columns: repeat(6, 44px);
+    gap: 10px;
+    margin: 10px 0 6px;
+
+    @media (max-width: 480px) {
+        grid-template-columns: repeat(6, 36px);
+        gap: 8px;
+    }
+}
+
+.avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-weight: 800;
+    background: linear-gradient(135deg, #3895d1, #2c7bb8);
+    color: #fff;
+    box-shadow: 0 3px 10px rgba(44, 123, 184, 0.28);
+
+    @media (max-width: 480px) {
+        width: 36px;
+        height: 36px;
+        font-size: 0.9rem;
+    }
+}
+
+/* 인증 리스트 */
+.certList {
+    list-style: none;
+    padding: 0;
+    margin: 4px 0 0 0;
+    display: grid;
+    gap: 10px;
+}
+
+.certItem {
+    padding: 12px 12px;
+    border: 1px solid #e8eef4;
+    border-radius: 10px;
+    background: #fbfdff;
+}
+
+.certHead {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    margin-bottom: 6px;
+}
+
+.certName {
+    font-weight: 700;
+    color: #13435f;
+    font-size: 0.98rem;
+}
+
+.status {
+    padding: 4px 8px;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    line-height: 1;
+    border: 1px solid;
+
+    &.valid {
+        color: #0b6b3a;
+        background: #e8f6ee;
+        border-color: #bfe6cf;
+    }
+
+    &.pending {
+        color: #8a5a00;
+        background: #fff6e5;
+        border-color: #f5d9a8;
+    }
+}
+
+.certMeta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-size: 0.85rem;
+    color: #587084;
+}
+
+.issuer::before {
+    content: "발급: ";
+    color: #7a8ea0;
+}
+
+.until::before {
+    content: "· ";
+    margin: 0 4px;
+    color: #a8bac9;
+}
+
+/* 기능 버튼 */
+
+.mainServices {
+    background: white;
+    padding: 40px 0;
+}
+
+.mainContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.servicesContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.serviceButton {
+    display: flex;
+    align-items: center;
+    padding: 30px;
+    background: white;
+    border: 2px solid #e9ecef;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, #3895d1, #2c7bb8);
+        transition: all 0.4s ease;
+        z-index: 1;
+    }
+
+    &:hover::before {
+        left: 0;
+    }
+
+    &:hover {
+        border-color: #3895d1;
+        transform: translateX(10px);
+        color: white;
+    }
+
+    > * {
+        position: relative;
+        z-index: 2;
+    }
+}
+
+.serviceNumber {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #3895d1;
+    margin-right: 25px;
+    min-width: 80px;
+    transition: all 0.4s ease;
+
+    .serviceButton:hover & {
+        color: white;
+    }
+}
+
+.serviceInfo {
+    flex: 1;
+
+    h3 {
+        font-size: 1.5rem;
+        color: #2c3e50;
+        margin-bottom: 8px;
+        transition: all 0.4s ease;
+
+        .serviceButton:hover & {
+            color: white;
+        }
+    }
+
+    p {
+        color: #666;
+        font-size: 1rem;
+        transition: all 0.4s ease;
+
+        .serviceButton:hover & {
+            color: rgba(255, 255, 255, 0.9);
+        }
+    }
+}
+
+.serviceArrow {
+    font-size: 1.8rem;
+    color: #3895d1;
+    transition: all 0.4s ease;
+
+    .serviceButton:hover & {
+        color: white;
+        transform: translateX(10px);
+    }
+}
+
+/* 설명 문구 */
+.muted {
+    margin-top: 10px;
+    font-size: 0.85rem;
+    color: #6b7f8e;
+}
+
+/* 기존 모바일 반응형과 조화 */
+@media (max-width: 768px) {
+    .infoBanner {
+        padding: 20px 14px;
+        gap: 10px;
+    }
+    .infoCard {
+        min-width: 100%;
+        padding: 18px 16px;
+    }
+}
+
+/* 하단 푸터 */
+.footer {
+    padding: 20px 0;
+    color: white;
+    font-size: 0.9em;
+    text-align: center;
+}
+
+/* 모바일 반응형 */
+@media (max-width: 768px) {
+    .page {
+        padding: 0 3vw;
+    }
+    .container {
+        padding: 30px 20px;
+    }
+    .infoCard {
+        border-right: none;
+        border-bottom: 1px solid #e0e0e0;
+        padding-bottom: 25px;
+        margin-bottom: 20px;
+    }
+    .infoBanner .infoCard:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+    }
+    .newIntroSection {
+        padding: 40px 20px;
+        text-align: center;
+    }
+    .introText {
+        padding-left: 0;
+        margin-top: 30px;
+    }
+    .statsSection {
+        justify-content: center;
+    }
+}
