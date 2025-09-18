@@ -16,20 +16,22 @@
 }
 .logo {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    gap: 5px;
+    justify-content: center;
+    gap: 12px;
 }
 .line {
-    width: 120%;
-    height: 2px;
+    width: 2px;
+    height: 100%;
     background: white;
     margin-top: 8px;
 }
 .mainText {
     color: white;
-    font-size: 20px;
-    font-weight: 500;
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 1;
+    transform: translateY(3px);
 }
 
 /* 메인 콘텐츠 컨테이너 */
@@ -39,26 +41,31 @@
     // padding: 6vh 50px;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
     text-align: center;
-    max-width: 1650px;
-    margin: 0 auto;
+    // max-width: 1650px;
+    margin: 0 100px;
     border-radius: 16px;
     overflow: hidden;
 }
 
 /* 3단 정보 배너 스타일 (업데이트) */
+.infoBackground {
+    width: 100%;
+    background-color: #fbfbfb;
+}
+
 .infoBanner {
     display: flex;
+    width: 95%;
+    margin: 0 auto;
     justify-content: center;
     text-align: left;
-    flex-wrap: wrap;
-    background-color: #fbfbfb;
     padding: 40px 18px;
     gap: 12px;
 }
 
 .infoCard {
+    flex: 1;
     min-width: 320px;
-    max-width: 520px;
     padding: 22px 22px;
     border-right: 0;
     border-radius: 14px;
@@ -68,12 +75,23 @@
     transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
     border: 1px solid #e9eef3;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+
+    .coImage {
+        width: 100%;
+        height: 240px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+        }
+    }
 
     h3 {
         font-size: 1.25rem;
         color: #0e3b57;
-        margin: 0 0 14px 0;
-        font-weight: 700;
+        font-weight: 900;
         letter-spacing: -0.2px;
     }
 }
@@ -218,6 +236,57 @@
     }
 }
 
+/* 장기협업 파트너 항목 */
+.partnerBox {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px;
+    margin: 14px 0;
+    border-radius: 12px;
+    background: linear-gradient(180deg, #f6fbff, #eef6fb);
+    border: 1px solid #dfeaf3;
+    box-shadow: 0 2px 6px rgba(56, 149, 209, 0.08);
+}
+
+.partnerLogo {
+    width: 56px;
+    height: 56px;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    padding: 5px;
+}
+
+.partnerLogo img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.partnerInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.partnerInfo strong {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #0e3b57;
+}
+
+.partnerInfo p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #2c7bb8;
+    font-weight: 600;
+}
+
 /* 인증 리스트 */
 .certList {
     list-style: none;
@@ -293,6 +362,7 @@
 .mainServices {
     background: white;
     padding: 40px 0;
+    margin: 0 20px;
 }
 
 .mainContainer {
@@ -456,7 +526,7 @@
 /* 하단 기업 소개 */
 .companyIntro {
     background: #fafafa;
-    padding: 80px 0;
+    padding: 80px 100px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -651,4 +721,66 @@
 
 .circleText {
     text-align: center;
+}
+
+.servicesContainer {
+    display: flex;
+    justify-content: space-between; /* 3개 균등 간격 */
+    gap: 20px;
+}
+
+.serviceButton {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding: 24px 28px;
+    background: linear-gradient(180deg, #ffffff, #f4f8fb);
+    border: 2px solid #e0e6eb;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08); /* 기본 버튼 그림자 */
+}
+
+.serviceButton:hover {
+    background: linear-gradient(135deg, #3895d1, #2c7bb8);
+    border-color: #2c7bb8;
+    transform: translateY(-3px); /* 살짝 떠오르는 느낌 */
+    box-shadow: 0 6px 14px rgba(44, 123, 184, 0.3);
+}
+
+.serviceNumber {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #3895d1;
+    margin-right: 20px;
+    min-width: 60px;
+    transition: color 0.25s ease;
+}
+
+.serviceInfo h3 {
+    font-size: 1.3rem;
+    color: #2c3e50;
+    margin-bottom: 6px;
+    transition: color 0.25s ease;
+}
+
+.serviceInfo p {
+    font-size: 0.95rem;
+    color: #666;
+    transition: color 0.25s ease;
+}
+
+.serviceArrow {
+    font-size: 1.6rem;
+    color: #3895d1;
+    margin-left: auto;
+    transition: all 0.25s ease;
+}
+
+.serviceButton:hover .serviceNumber,
+.serviceButton:hover .serviceInfo h3,
+.serviceButton:hover .serviceInfo p,
+.serviceButton:hover .serviceArrow {
+    color: #fff;
 }
