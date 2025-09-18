@@ -70,11 +70,10 @@
     border-right: 0;
     border-radius: 14px;
     background: #fff;
-    box-shadow: 0 2px 0 rgba(56, 149, 209, 0.06) inset, 0 1px 0 rgba(44, 123, 184, 0.04);
+    // box-shadow: 0 10px 10px rgba(56, 149, 209, 0.06) inset, 0 1px 0 rgba(44, 123, 184, 0.04);
     position: relative;
     transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
-    border: 1px solid #e9eef3;
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #d2d7dd;
     overflow: hidden;
 
     .coImage {
@@ -91,7 +90,7 @@
     h3 {
         font-size: 1.25rem;
         color: #0e3b57;
-        font-weight: 900;
+        font-weight: 800;
         letter-spacing: -0.2px;
     }
 }
@@ -371,21 +370,24 @@
 }
 
 .servicesContainer {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
+    display: flex;
+    justify-content: space-between; /* 3개 균등 간격 */
+    gap: 20px;
+    margin: 0 50px;
 }
 
 .serviceButton {
+    flex: 1;
+    position: relative;
     display: flex;
     align-items: center;
-    padding: 30px;
-    background: white;
-    border: 2px solid #e9ecef;
-    border-radius: 15px;
+    padding: 30px 15px;
+    background: linear-gradient(180deg, #ffffff, #f4f8fb);
+    border: 2px solid #d5dbe0;
+    border-radius: 14px;
     cursor: pointer;
-    transition: all 0.4s ease;
-    position: relative;
+    transition: all 0.25s ease;
+    box-shadow: 3px 6px 6px rgba(0, 0, 0, 0.1); /* 기본 버튼 그림자 */
     overflow: hidden;
 
     &::before {
@@ -406,8 +408,10 @@
 
     &:hover {
         border-color: #3895d1;
-        transform: translateX(10px);
+        transform: translateY(-3px); /* 살짝 떠오르는 느낌 */
         color: white;
+        // background: linear-gradient(135deg, #3895d1, #2c7bb8);
+        box-shadow: 0 6px 14px rgba(44, 123, 184, 0.3);
     }
 
     > * {
@@ -417,52 +421,43 @@
 }
 
 .serviceNumber {
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: bold;
     color: #3895d1;
-    margin-right: 25px;
-    min-width: 80px;
-    transition: all 0.4s ease;
-
-    .serviceButton:hover & {
-        color: white;
-    }
+    margin-right: 0px;
+    min-width: 60px;
+    transition: color 0.25s ease;
 }
 
 .serviceInfo {
     flex: 1;
 
     h3 {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         color: #2c3e50;
-        margin-bottom: 8px;
-        transition: all 0.4s ease;
-
-        .serviceButton:hover & {
-            color: white;
-        }
+        margin-bottom: 6px;
+        transition: color 0.25s ease;
+        font-weight: 700;
     }
-
     p {
+        font-size: 0.95rem;
         color: #666;
-        font-size: 1rem;
-        transition: all 0.4s ease;
-
-        .serviceButton:hover & {
-            color: rgba(255, 255, 255, 0.9);
-        }
+        transition: color 0.25s ease;
     }
 }
 
 .serviceArrow {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     color: #3895d1;
-    transition: all 0.4s ease;
+    margin-left: auto;
+    transition: all 0.25s ease;
+}
 
-    .serviceButton:hover & {
-        color: white;
-        transform: translateX(10px);
-    }
+.serviceButton:hover .serviceNumber,
+.serviceButton:hover .serviceInfo h3,
+.serviceButton:hover .serviceInfo p,
+.serviceButton:hover .serviceArrow {
+    color: #fff;
 }
 
 /* 설명 문구 */
@@ -646,6 +641,10 @@
     align-items: center;
 }
 
+.visionContent {
+    margin: 0 100px;
+}
+
 .visionContent h2 {
     font-size: 2.2rem;
     color: #2c3e50;
@@ -721,66 +720,4 @@
 
 .circleText {
     text-align: center;
-}
-
-.servicesContainer {
-    display: flex;
-    justify-content: space-between; /* 3개 균등 간격 */
-    gap: 20px;
-}
-
-.serviceButton {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    padding: 24px 28px;
-    background: linear-gradient(180deg, #ffffff, #f4f8fb);
-    border: 2px solid #e0e6eb;
-    border-radius: 14px;
-    cursor: pointer;
-    transition: all 0.25s ease;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08); /* 기본 버튼 그림자 */
-}
-
-.serviceButton:hover {
-    background: linear-gradient(135deg, #3895d1, #2c7bb8);
-    border-color: #2c7bb8;
-    transform: translateY(-3px); /* 살짝 떠오르는 느낌 */
-    box-shadow: 0 6px 14px rgba(44, 123, 184, 0.3);
-}
-
-.serviceNumber {
-    font-size: 2rem;
-    font-weight: bold;
-    color: #3895d1;
-    margin-right: 20px;
-    min-width: 60px;
-    transition: color 0.25s ease;
-}
-
-.serviceInfo h3 {
-    font-size: 1.3rem;
-    color: #2c3e50;
-    margin-bottom: 6px;
-    transition: color 0.25s ease;
-}
-
-.serviceInfo p {
-    font-size: 0.95rem;
-    color: #666;
-    transition: color 0.25s ease;
-}
-
-.serviceArrow {
-    font-size: 1.6rem;
-    color: #3895d1;
-    margin-left: auto;
-    transition: all 0.25s ease;
-}
-
-.serviceButton:hover .serviceNumber,
-.serviceButton:hover .serviceInfo h3,
-.serviceButton:hover .serviceInfo p,
-.serviceButton:hover .serviceArrow {
-    color: #fff;
 }
