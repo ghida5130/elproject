@@ -21,6 +21,49 @@ export default function Page() {
 
             <div className={styles.container}>
                 {/* 3단 정보 배너 */}
+                {/* 기능 버튼 */}
+                <section className={styles.mainServices}>
+                    <div className={styles.mainContainer}>
+                        <div className={styles.servicesContainer}>
+                            <a
+                                href="https://script.google.com/macros/s/AKfycbx1zJ6-rJWG33muq8qJVY9UN7nc2PHlRw55cS7SKwdBwm--tmtmaemY_H4YXZHi2_0APg/exec"
+                                className={styles.serviceButton}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <div className={styles.serviceNumber}>01</div>
+                                <div className={styles.serviceInfo}>
+                                    <h3>소개 자료 조회</h3>
+                                    <p>기업의 핵심 역량을 확인하세요</p>
+                                </div>
+                                <div className={styles.serviceArrow}>→</div>
+                            </a>
+
+                            <div className={styles.serviceButton}>
+                                <div className={styles.serviceNumber}>02</div>
+                                <div className={styles.serviceInfo}>
+                                    <h3>서류 발급</h3>
+                                    <p>필요한 서류를 빠르게 발급받으세요</p>
+                                </div>
+                                <div className={styles.serviceArrow}>→</div>
+                            </div>
+
+                            <a
+                                href="https://script.google.com/macros/s/AKfycbwL79CJEbn1tNO8RIgIDGclLwH9A2FPMUMDGdT_475x_NrrRx2oxOfxwoqmqrI4GPikVA/exec"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className={styles.serviceButton}
+                            >
+                                <div className={styles.serviceNumber}>03</div>
+                                <div className={styles.serviceInfo}>
+                                    <h3>모의 견적</h3>
+                                    <p>프로젝트 견적을 자동으로 산출해드립니다</p>
+                                </div>
+                                <div className={styles.serviceArrow}>→</div>
+                            </a>
+                        </div>
+                    </div>
+                </section>
                 <div className={styles.infoBackground}>
                     <div className={styles.infoBanner} aria-label="협업 정보 요약">
                         {/* 협업 기업 */}
@@ -90,39 +133,6 @@ export default function Page() {
                         </div>
                     </div>
                 </div>
-                {/* 기능 버튼 */}
-                <section className={styles.mainServices}>
-                    <div className={styles.mainContainer}>
-                        <div className={styles.servicesContainer}>
-                            <div className={styles.serviceButton}>
-                                <div className={styles.serviceNumber}>01</div>
-                                <div className={styles.serviceInfo}>
-                                    <h3>소개 자료 조회</h3>
-                                    <p>기업의 핵심 역량을 확인하세요</p>
-                                </div>
-                                <div className={styles.serviceArrow}>→</div>
-                            </div>
-
-                            <div className={styles.serviceButton}>
-                                <div className={styles.serviceNumber}>02</div>
-                                <div className={styles.serviceInfo}>
-                                    <h3>서류 발급</h3>
-                                    <p>필요한 서류를 빠르게 발급받으세요</p>
-                                </div>
-                                <div className={styles.serviceArrow}>→</div>
-                            </div>
-
-                            <div className={styles.serviceButton}>
-                                <div className={styles.serviceNumber}>03</div>
-                                <div className={styles.serviceInfo}>
-                                    <h3>모의 견적</h3>
-                                    <p>프로젝트 견적을 자동으로 산출해드립니다</p>
-                                </div>
-                                <div className={styles.serviceArrow}>→</div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
 
                 <section className={styles.companyIntro}>
                     <div className={styles.introLayout}>
